@@ -3,6 +3,9 @@
     <h1>
       <i class='fa fa-location-arrow blue arrow'></i>Handicap<span class='blue'>Map</span>
     </h1>
+    <% if notice.present? %>
+        <span class='blue alert-message'><%= notice %></span>
+    <% end %>
   </header>
 
   <div class='row'>
@@ -14,7 +17,6 @@
         <%= label_tag(:start, 'Start', class: 'pull-left') %>
         <%= text_field_tag(:start, nil, class: 'form-control') %>
       </div>
-
       <div class='row input push-down'>
         <i class='fa fa-flag-checkered blue pull-left'></i>
         <%= label_tag(:destination, 'Destination', class: 'pull-left') %>

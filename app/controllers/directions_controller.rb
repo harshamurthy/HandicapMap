@@ -11,7 +11,7 @@ class DirectionsController < ApplicationController
       @routes = @direction.return_directions
       render 'route'
     else
-      redirect_to root_url
+      redirect_to root_url, notice: 'Please make sure both fields are completed.'
     end
   end
 

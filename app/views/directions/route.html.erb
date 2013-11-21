@@ -1,26 +1,25 @@
 
-<div class="container">
+<div class='container'>
 
-  <header class="logo">
-    <h1>Accessible <span class="blue">routes</span></h1>
-    <h2 class="route-desc"><span class="text-muted">from</span> <%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class="text-muted">to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %></h2>
+  <header class='logo'>
+    <h1>Accessible <span class='blue'>routes</span></h1>
+    <h2 class='route-desc'><span class='text-muted'>from</span> <%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %></h2>
   </header>
 
   <% routes_option_counter = 1 %>
   <% @routes.each do |route| %>
-    <div class="row">
-      <h2 class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-        <i class="fa fa-wheelchair blue"></i>
+    <div class='row'>
+      <h2 class='col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1'>
+        <i class='fa fa-wheelchair blue'></i>
         Route <%= routes_option_counter %>
-        <% routes_option_counter += 1 %>
       </h2>
 
-      <article class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+      <article class='col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1'>
         <ul>
           <li class='route-distance'>Total Distance: <%= route['distance'] %></li>
           <li class='route-duration'>Approximate Duration: <%= route['duration'] %></li>
-          <li class='route-directions'>Directions</li>
-          <ul>
+          <li class='toggle go-away route-directions click'><span class='blue'>Directions</span></li>
+          <ul class='directions'>
             <% route['route'].each do |step| %>
               <% if step == route['route'].first %>
                 <li class='route-first'><%= step['distance'] %> - <%= step['instruction'] %></li>
@@ -32,8 +31,20 @@
             <% end %>
           </ul>
         </ul>
-
       </article>
     </div>
+    <% routes_option_counter += 1 %>
   <% end %>
 </div>
+
+<script>
+  $(document).ready(function() {
+    var directions = $('.go-away').siblings('ul')
+    directions.hide();
+    $('.toggle').on('click', function () {
+      var closestDirection = $(this).siblings('ul')
+      closestDirection.slideToggle('slow');
+    });
+  });
+</script>
+
