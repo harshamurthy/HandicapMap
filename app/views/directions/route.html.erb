@@ -1,6 +1,4 @@
-<div>
-  <i class="fa fa-wheelchair blue"></i> <i class="fa fa-arrow-right"></i> <%= link_to "<i class=\"fa fa-home\"></i>".html_safe, root_url, class: 'blue' %>
-</div>
+
 <div class='container'>
 
   <header class='logo'>
@@ -20,9 +18,7 @@
         <ul>
           <li class='route-distance'>Total Distance: <%= route['distance'] %></li>
           <li class='route-duration'>Approximate Duration: <%= route['duration'] %></li>
-          <div>
-
-</div>          <i class="fa fa-wheelchair blue"></i> way route-directions click'><span class='blue'>Directions</span></li>
+          <li class='toggle go-away route-directions click'><span class='blue'>Directions</span></li>
           <ul class='directions'>
             <% route['route'].each do |step| %>
               <% if step == route['route'].first %>

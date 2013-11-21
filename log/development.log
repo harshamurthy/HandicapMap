@@ -21638,3 +21638,84 @@ Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-21 14:01:47 -06
 
 
 Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-21 14:01:47 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Chicago+OTC&commit=Route" for 127.0.0.1 at 2013-11-21 14:04:28 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Chicago OTC", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 912ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Chicago+OTC&commit=Route" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Chicago OTC", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 406ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-21 14:04:29 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-21 14:04:32 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Chicago+OTC&commit=Route" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Chicago OTC", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 543ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-21 14:05:11 -0600
