@@ -266,6 +266,10 @@ label {
 
 @media all and (max-width: 767px) {
 
+  .alert-message {
+    font-size: 14px !important;
+  }
+
   .container {
     padding-top: 10px;
   }
