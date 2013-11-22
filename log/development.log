@@ -34538,3 +34538,1750 @@ Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
 
 
 Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:01:09 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:01:15 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+ERROR: compiling _app_views_directions_route_html_erb___1964423309457274903_70264694744340 RAISED /Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:47: syntax error, unexpected keyword_elsif, expecting keyword_end
+';               elsif step == route['route'].last 
+                      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected keyword_else, expecting keyword_end
+';               else 
+                     ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:84: syntax error, unexpected keyword_end, expecting end-of-input
+             end 
+                ^
+Function body:           def _app_views_directions_route_html_erb___1964423309457274903_70264694744340(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "directions/route";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+<div class=\'container\'>
+
+  <header class=\'logo\'>
+    <h1>Accessible <span class=\'blue\'>routes</span></h1>
+    <h2 class=\'route-desc\'>
+      ';@output_buffer.append=( link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url );@output_buffer.safe_append='<span class=\'text-muted\'>from </span>';@output_buffer.append=( @direction.start.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append=' <span class=\'text-muted\'>to</span> ';@output_buffer.append=( @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append='
+    </h2>
+  </header>
+';   if @routes.count == 1 
+     @style = 'none' 
+   else 
+     @style = 'go-away' 
+   end 
+   routes_option_counter = 1 
+   @routes.each do |route| 
+@output_buffer.safe_append='    <div class=\'row\'>
+      <h2 class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <div class=\'route-duration pull-right\' style=\'font-size: 12px\'>';@output_buffer.append=( route['duration'] );@output_buffer.safe_append='</div>
+        <i class=\'fa fa-wheelchair blue\'></i>
+        Route ';@output_buffer.append=( routes_option_counter );@output_buffer.safe_append='
+      </h2>
+
+      <article class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <ul>
+          <li class=\'toggle ';@output_buffer.append=( @style );@output_buffer.safe_append=' route-directions click\'><span class=\'blue\'>Directions</span></li>
+          <ul class=\'directions\'>
+';             route['route'].each do |step| 
+               if step == route['route'].first 
+@output_buffer.safe_append='                <li class=\'route-first\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='
+';                       end 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               elsif step == route['route'].last 
+@output_buffer.safe_append='                <li class=\'route-last\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='
+';                       end 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               else 
+@output_buffer.safe_append='                <li>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='
+';                       end 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               end 
+             end 
+@output_buffer.safe_append='          </ul>
+        </ul>
+      </article>
+    </div>
+';     routes_option_counter += 1 
+   end 
+@output_buffer.safe_append='</div>
+
+<script>
+  $(document).ready(function() {
+    var directions = $(\'.go-away\').siblings(\'ul\')
+    directions.hide();
+    $(\'.toggle\').on(\'click\', function () {
+      var closestDirection = $(this).siblings (\'ul\')
+      closestDirection.slideToggle(\'slow\');
+    });
+  });
+</script>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/controllers/directions_controller.rb:12:in `route'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__3605015986133722072__process_action__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3698806133571771596__call__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered directions/route.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 1079ms
+
+ActionView::Template::Error (/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:47: syntax error, unexpected keyword_elsif, expecting keyword_end
+';               elsif step == route['route'].last 
+                      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected keyword_else, expecting keyword_end
+';               else 
+                     ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:84: syntax error, unexpected keyword_end, expecting end-of-input
+             end 
+                ^):
+    44:                     <% end %>
+    45:                   <% end %>
+    46:                 </li>
+    47:               <% elsif step == route['route'].last %>
+    48:                 <li class='route-last'>
+    49:                   <% if step['travel_mode'] == 'WALKING' %>
+    50:                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:01:34 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 809ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:01:35 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 367ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:01:47 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 782ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:02:25 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 526ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:03:00 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:03:14 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 415ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:03:15 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:04:22 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 386ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:04:23 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 481ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:04:34 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:05:22 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 651ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:05:23 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:05:54 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 899ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:05:55 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:06:12 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 418ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:06:13 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:07:44 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+ERROR: compiling _app_views_directions_route_html_erb___1964423309457274903_70264707134800 RAISED /Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:60: unknown regexp option - l
+unmatched close parenthesis: /span> );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </i
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                         ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tCONSTANT, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                                       ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@o...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.s...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...struction'].gsub!('Walk', 'Roll') );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tIDENTIFIER, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.safe_append=' - Take the <span style=\'background-col...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...append=' - Take the <span style=\'background-color: blue !im...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:70: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:72: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:74: syntax error, unexpected keyword_end, expecting ')'
+';                     end 
+                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+';               end 
+                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:84: syntax error, unexpected keyword_end, expecting ')'
+   end 
+      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_directions_route_html_erb___1964423309457274903_70264707134800(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "directions/route";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+<div class=\'container\'>
+
+  <header class=\'logo\'>
+    <h1>Accessible <span class=\'blue\'>routes</span></h1>
+    <h2 class=\'route-desc\'>
+      ';@output_buffer.append=( link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url );@output_buffer.safe_append='<span class=\'text-muted\'>from </span>';@output_buffer.append=( @direction.start.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append=' <span class=\'text-muted\'>to</span> ';@output_buffer.append=( @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append='
+    </h2>
+  </header>
+';   if @routes.count == 1 
+     @style = 'none' 
+   else 
+     @style = 'go-away' 
+   end 
+   routes_option_counter = 1 
+   @routes.each do |route| 
+@output_buffer.safe_append='    <div class=\'row\'>
+      <h2 class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <div class=\'route-duration pull-right\' style=\'font-size: 12px\'>';@output_buffer.append=( route['duration'] );@output_buffer.safe_append='</div>
+        <i class=\'fa fa-wheelchair blue\'></i>
+        Route ';@output_buffer.append=( routes_option_counter );@output_buffer.safe_append='
+      </h2>
+
+      <article class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <ul>
+          <li class=\'toggle ';@output_buffer.append=( @style );@output_buffer.safe_append=' route-directions click\'><span class=\'blue\'>Directions</span></li>
+          <ul class=\'directions\'>
+';             route['route'].each do |step| 
+               if step == route['route'].first 
+@output_buffer.safe_append='                <li class=\'route-first\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               elsif step == route['route'].last 
+@output_buffer.safe_append='                <li class=\'route-last\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name']</span> );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               else 
+@output_buffer.safe_append='                <li>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               end 
+             end 
+@output_buffer.safe_append='          </ul>
+        </ul>
+      </article>
+    </div>
+';     routes_option_counter += 1 
+   end 
+@output_buffer.safe_append='</div>
+
+<script>
+  $(document).ready(function() {
+    var directions = $(\'.go-away\').siblings(\'ul\')
+    directions.hide();
+    $(\'.toggle\').on(\'click\', function () {
+      var closestDirection = $(this).siblings (\'ul\')
+      closestDirection.slideToggle(\'slow\');
+    });
+  });
+</script>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/controllers/directions_controller.rb:12:in `route'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__3605015986133722072__process_action__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3698806133571771596__call__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered directions/route.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 514ms
+
+ActionView::Template::Error (/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:60: unknown regexp option - l
+unmatched close parenthesis: /span> );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </i
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                         ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tCONSTANT, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                                       ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@o...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.s...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...struction'].gsub!('Walk', 'Roll') );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tIDENTIFIER, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.safe_append=' - Take the <span style=\'background-col...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...append=' - Take the <span style=\'background-color: blue !im...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:70: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:72: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:74: syntax error, unexpected keyword_end, expecting ')'
+';                     end 
+                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+';               end 
+                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:84: syntax error, unexpected keyword_end, expecting ')'
+   end 
+      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:101: syntax error, unexpected keyword_end, expecting ')'):
+    57:                       <%= step['distance'] %> - Take the <span style='background-color: #666; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> Metra to <span style='background-color: #000; padding: 0 5px; border-radius: 10px;'><%= step['arrival_stop_name']</span> %>
+    58:                     <% end %>
+    59:                   <% end %>
+    60:                 </li>
+    61:               <% else %>
+    62:                 <li>
+    63:                   <% if step['travel_mode'] == 'WALKING' %>
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:07:59 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 452ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:08:00 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:08:23 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 634ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:08:24 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:08:46 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+ERROR: compiling _app_views_directions_route_html_erb___1964423309457274903_70264695047500 RAISED /Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:42: syntax error, unexpected keyword_elsif, expecting keyword_end
+';               elsif step == route['route'].last 
+                      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:58: syntax error, unexpected keyword_else, expecting keyword_end
+';               else 
+                     ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:81: syntax error, unexpected keyword_end, expecting end-of-input
+   end 
+      ^
+Function body:           def _app_views_directions_route_html_erb___1964423309457274903_70264695047500(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "directions/route";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+<div class=\'container\'>
+
+  <header class=\'logo\'>
+    <h1>Accessible <span class=\'blue\'>routes</span></h1>
+    <h2 class=\'route-desc\'>
+      ';@output_buffer.append=( link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url );@output_buffer.safe_append='<span class=\'text-muted\'>from </span>';@output_buffer.append=( @direction.start.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append=' <span class=\'text-muted\'>to</span> ';@output_buffer.append=( @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append='
+    </h2>
+  </header>
+';   if @routes.count == 1 
+     @style = 'none' 
+   else 
+     @style = 'go-away' 
+   end 
+   routes_option_counter = 1 
+   @routes.each do |route| 
+@output_buffer.safe_append='    <div class=\'row\'>
+      <h2 class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <div class=\'route-duration pull-right\' style=\'font-size: 12px\'>';@output_buffer.append=( route['duration'] );@output_buffer.safe_append='</div>
+        <i class=\'fa fa-wheelchair blue\'></i>
+        Route ';@output_buffer.append=( routes_option_counter );@output_buffer.safe_append='
+      </h2>
+
+      <article class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <ul>
+          <li class=\'route-first\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+                </li>
+';               elsif step == route['route'].last 
+@output_buffer.safe_append='                <li class=\'route-last\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               else 
+@output_buffer.safe_append='                <li>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='</span>
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               end 
+             end 
+@output_buffer.safe_append='          </ul>
+        </ul>
+      </article>
+    </div>
+';     routes_option_counter += 1 
+   end 
+@output_buffer.safe_append='</div>
+
+<script>
+  $(document).ready(function() {
+    var directions = $(\'.go-away\').siblings(\'ul\')
+    directions.hide();
+    $(\'.toggle\').on(\'click\', function () {
+      var closestDirection = $(this).siblings (\'ul\')
+      closestDirection.slideToggle(\'slow\');
+    });
+  });
+</script>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/controllers/directions_controller.rb:12:in `route'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__3605015986133722072__process_action__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3698806133571771596__call__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered directions/route.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 387ms
+
+ActionView::Template::Error (/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:42: syntax error, unexpected keyword_elsif, expecting keyword_end
+';               elsif step == route['route'].last 
+                      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:58: syntax error, unexpected keyword_else, expecting keyword_end
+';               else 
+                     ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:81: syntax error, unexpected keyword_end, expecting end-of-input
+   end 
+      ^):
+    39:                   <% end %>
+    40:                 </li>
+    41:                 </li>
+    42:               <% elsif step == route['route'].last %>
+    43:                 <li class='route-last'>
+    44:                   <% if step['travel_mode'] == 'WALKING' %>
+    45:                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:08:57 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+ERROR: compiling _app_views_directions_route_html_erb___1964423309457274903_70264707819460 RAISED /Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:60: unknown regexp option - l
+unmatched close parenthesis: /span>
+                    <% end );@output_buffer.safe_append='
+';                   end 
+@output_buffer.safe_append='                </i
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                         ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tCONSTANT, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                                       ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@o...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.s...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...struction'].gsub!('Walk', 'Roll') );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tIDENTIFIER, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.safe_append=' - Take the <span style=\'background-col...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...append=' - Take the <span style=\'background-color: blue !im...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:70: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:72: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:74: syntax error, unexpected keyword_end, expecting ')'
+';                     end 
+                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+';               end 
+                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:84: syntax error, unexpected keyword_end, expecting ')'
+   end 
+      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_directions_route_html_erb___1964423309457274903_70264707819460(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "directions/route";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+<div class=\'container\'>
+
+  <header class=\'logo\'>
+    <h1>Accessible <span class=\'blue\'>routes</span></h1>
+    <h2 class=\'route-desc\'>
+      ';@output_buffer.append=( link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url );@output_buffer.safe_append='<span class=\'text-muted\'>from </span>';@output_buffer.append=( @direction.start.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append=' <span class=\'text-muted\'>to</span> ';@output_buffer.append=( @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append='
+    </h2>
+  </header>
+';   if @routes.count == 1 
+     @style = 'none' 
+   else 
+     @style = 'go-away' 
+   end 
+   routes_option_counter = 1 
+   @routes.each do |route| 
+@output_buffer.safe_append='    <div class=\'row\'>
+      <h2 class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <div class=\'route-duration pull-right\' style=\'font-size: 12px\'>';@output_buffer.append=( route['duration'] );@output_buffer.safe_append='</div>
+        <i class=\'fa fa-wheelchair blue\'></i>
+        Route ';@output_buffer.append=( routes_option_counter );@output_buffer.safe_append='
+      </h2>
+
+      <article class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <ul>
+          <li class=\'toggle ';@output_buffer.append=( @style );@output_buffer.safe_append=' route-directions click\'><span class=\'blue\'>Directions</span></li>
+          <ul class=\'directions\'>
+';             route['route'].each do |step| 
+               if step == route['route'].first 
+@output_buffer.safe_append='                <li class=\'route-first\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               elsif step == route['route'].last 
+@output_buffer.safe_append='                <li class=\'route-last\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to <span style=\'background-color: #000; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['arrival_stop_name']</span>
+                    <% end );@output_buffer.safe_append='
+';                   end 
+@output_buffer.safe_append='                </li>
+';               else 
+@output_buffer.safe_append='                <li>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               end 
+             end 
+@output_buffer.safe_append='          </ul>
+        </ul>
+      </article>
+    </div>
+';     routes_option_counter += 1 
+   end 
+@output_buffer.safe_append='</div>
+
+<script>
+  $(document).ready(function() {
+    var directions = $(\'.go-away\').siblings(\'ul\')
+    directions.hide();
+    $(\'.toggle\').on(\'click\', function () {
+      var closestDirection = $(this).siblings (\'ul\')
+      closestDirection.slideToggle(\'slow\');
+    });
+  });
+</script>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/controllers/directions_controller.rb:12:in `route'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__3605015986133722072__process_action__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3698806133571771596__call__callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/Harsha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered directions/route.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 535ms
+
+ActionView::Template::Error (/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:60: unknown regexp option - l
+unmatched close parenthesis: /span>
+                    <% end );@output_buffer.safe_append='
+';                   end 
+@output_buffer.safe_append='                </i
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                         ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:63: syntax error, unexpected tCONSTANT, expecting ')'
+';                   if step['travel_mode'] == 'WALKING' 
+                                                       ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@o...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.s...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:64: syntax error, unexpected tCONSTANT, expecting ')'
+...struction'].gsub!('Walk', 'Roll') );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:65: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'DRIVING' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( step['instruction'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:67: syntax error, unexpected tCONSTANT, expecting ')'
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tIDENTIFIER, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+                     if step['vehicle_type'] == 'BUS' 
+                                                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._buffer.append=( step['distance'] );@output_buffer.safe_appe...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.safe_append=' - Take the <span style=\'background-col...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...append=' - Take the <span style=\'background-color: blue !im...
+...                               ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:70: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:72: syntax error, unexpected keyword_elsif, expecting ')'
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+                            ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:74: syntax error, unexpected keyword_end, expecting ')'
+';                     end 
+                          ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+';               end 
+                    ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:84: syntax error, unexpected keyword_end, expecting ')'
+   end 
+      ^
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/Harsha/Documents/Coding/starter_school/entrepreneurship/tolva_lyon/HandicapMap/app/views/directions/route.html.erb:101: syntax error, unexpected keyword_end, expecting ')'):
+    57:                       <%= step['distance'] %> - Take the <span style='background-color: #666; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> Metra to <span style='background-color: #000; padding: 0 5px; border-radius: 10px;'><%= step['arrival_stop_name']</span>
+    58:                     <% end %>
+    59:                   <% end %>
+    60:                 </li>
+    61:               <% else %>
+    62:                 <li>
+    63:                   <% if step['travel_mode'] == 'WALKING' %>
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Harsha/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 12:09:06 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 512ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 12:09:07 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 13:27:58 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 13:27:59 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 13:27:59 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 13:27:59 -0600
