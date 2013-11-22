@@ -40,7 +40,12 @@ li.last:before {
   font-size: 0.8em;
 }
 
-li.route-distance:before {
+div.route-duration, div.route-distance {
+  position: relative;
+  top: 12px;
+}
+
+div.route-distance:before {
   font-family: 'FontAwesome';
   content: '\f018';
   font-style: normal;
@@ -49,12 +54,11 @@ li.route-distance:before {
   color: #777;
   font-size: 18px;
   padding-right: 0.5em;
-  position: absolute;
-  top: 11px;
-  left: -33px;
+  position: relative;
+  top: 2px;
 }
 
-li.route-duration:before {
+div.route-duration:before {
   font-family: 'FontAwesome';
   content: '\f017';
   font-style: normal;
@@ -63,9 +67,8 @@ li.route-duration:before {
   color: #777;
   font-size: 18px;
   padding-right: 0.5em;
-  position: absolute;
-  top: 11px;
-  left: -33px;
+  position: relative;
+  top: 2px;
 }
 
 li.route-directions:before {
