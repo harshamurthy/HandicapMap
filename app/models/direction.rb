@@ -83,7 +83,7 @@ class Direction
   end
 
   def accesccible?
-    accessible_array = %w[Kimball, Kedzie, Francisco, Rockwell, Western, Damen, Montrose, Irving Park, Addison, Paulina, Southport, Belmont, Wellington, Diversey, Fullerton, Armitage, Sedgwick, Chicago, Merchandise Mart, Washington/Wells, Harold Washington Library-State/Van Buren, Clark/Lake, O’Hare, Rosemont, Cumberland, Harlem (O'Hare), Jefferson Park, Logan Square, Western (O’Hare), Jackson, UIC-Halsted, Illinois Medical District (Damen Entrance), Kedzie-Homan, Forest Park, Ashland/63rd, Halsted-Orange, Cottage Grove, King Drive, Garfield, 51st, 47th, 43rd, Indiana, 35th-Bronzeville-IIT, Roosevelt, Morgan, Ashland, California, Kedzie, Conservatory-Central Park Drive, Pulaski, Cicero, Laramie, Central, Harlem/Lake (via Marion entrance), Midway, Pulaski, Kedzie, Western, 35/Archer, Ashland, Halsted, Roosevelt; also Harold Washington Library-State/Van Buren, Washington/Wells, 54th/Cermak, Cicero, Kostner, Pulaski, Central Park, Kedzie, California, Western, Damen, 18th, Polk, Ashland, Morgan, Clinton, Clark/Lake, Harold Washington Library-State/Van Buren, and Washington/Wells, 54th/Cermak, Cicero, Kostner, Pulaski, Central Park, Kedzie, California, Western, Damen, 18th, Polk, Ashland, Morgan, Clinton, Clark/Lake, Harold Washington Library-State/Van Buren, and Washington/Wells, Howard, Loyola, Granville, Addison, Belmont, Fullerton, Chicago, Grand, Lake, Jackson, Roosevelt, Cermak-Chinatown, Sox-35th, 47th, Garfield, 63rd, 69th, 79th, 87th, 95th/Dan Ryan, Howard, Oakton-Skokie, Dempster-Skokie]
+    accessible_array = %w[Kimball, Kedzie, Francisco, Rockwell, Western, Damen, Montrose, Irving Park, Addison, Paulina, Southport, Belmont, Wellington, Diversey, Washington/Wells, Harold Washington Library-State/Van Buren, Clark/Lake, O’Hare, Rosemont, Cumberland, Harlem (O'Hare), Jefferson Park, Logan Square, Western (O’Hare), Jackson, UIC-Halsted, Illinois Medical District (Damen Entrance), Kedzie-Homan, Forest Park, Ashland/63rd, Cottage Grove, King Drive, Garfield, 51st, 47th, 43rd, Indiana, 35th-Bronzeville-IIT, Roosevelt, Clinton, Morgan, Ashland, California, Conservatory-Central Park Drive, Pulaski, Cicero, Laramie, Harlem/Lake (via Marion entrance), Midway, 35/Archer, Halsted, 54th/Cermak, Kostner, Central Park, 18th, Polk, Linden, Davis, Howard, Armitage, Sedgwick, Merchandise Mart, Loyola, Granville, Fullerton, Chicago, Grand, Lake, Cermak-Chinatown, Sox-35th, 63rd, 69th, 79th, , 87th, 95th/Dan Ryan, Oakton-Skokie, Dempster-Skokie]
 
     routes = self.return_directions
     counter = 0
@@ -98,23 +98,3 @@ class Direction
     return routes
   end
 end
-
-# TEST 1
-# direction = Direction.new
-# direction.start = 'Union Station, South Canal Street, Chicago, IL' # 41.8455265,-87.63843159999999
-# direction.destination = 'Merchandise Mart, Chicago, IL' # 41.8885694, -87.63552779999999
-#                                                         # 1385068785
-# puts direction.return_directions
-
-
-# variable = Howard
-
-# accessible_array.include?(variable)
-
-# TEST 2
-# direction = Direction.new
-# direction.start = 'Chicago'
-# direction.destination = 'Denver'
-# puts direction.return_directions
-
-#style="background-color:#522398;color:#ffffff"

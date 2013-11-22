@@ -5,7 +5,11 @@
     <h1>Accessible <span class='blue'>routes</span></h1>
     <h2 class='route-desc'><span class='text-muted'>from</span> <%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %></h2>
   </header>
-
+  <% if @routes.count == 1 %>
+    <% @style = 'none' %>
+  <% else %>
+    <% @style = 'go-away' %>
+  <% end %>
   <% routes_option_counter = 1 %>
   <% @routes.each do |route| %>
     <div class='row'>
@@ -17,7 +21,7 @@
 
       <article class='col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1'>
         <ul>
-          <li class='toggle go-away route-directions click'><span class='blue'>Directions</span></li>
+          <li class='toggle <%= @style %> route-directions click'><span class='blue'>Directions</span></li>
           <ul class='directions'>
             <% route['route'].each do |step| %>
               <% if step == route['route'].first %>
