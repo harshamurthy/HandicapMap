@@ -33100,3 +33100,1441 @@ Started GET "/" for 127.0.0.1 at 2013-11-22 11:29:03 -0600
 Processing by DirectionsController#landing_page as HTML
   Rendered directions/landing_page.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=New+York+City%2C+NY&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:40:11 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"New York City, NY", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1029ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:40:12 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 385ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:40:27 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:40:56 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 560ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:40:57 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 409ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:41:09 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:41:18 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 522ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:41:19 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:42:26 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1516ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:42:28 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:43:04 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 474ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:43:05 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 378ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:43:21 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 464ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:43:36 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 534ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:43:52 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 435ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:44:20 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:44:21 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:44:39 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 532ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:44:40 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 328ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:45:02 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 415ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:45:09 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 387ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:45:26 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:45:27 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 321ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:45:55 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:45:59 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 437ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:46:00 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 777ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:46:37 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:46:38 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=624+central+Street+Evanston+IL&destination=Evanston+Township+High+School&commit=Route" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"624 central Street Evanston IL", "destination"=>"Evanston Township High School", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 466ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:46:56 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:47:01 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:47:10 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 537ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:47:11 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:47:36 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 393ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:47:37 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:47:42 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:47:49 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 628ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:47:50 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 494ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:48:21 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:48:25 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 556ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:48:26 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:48:53 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 467ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:48:54 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:48:58 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 637ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:48:59 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:49:02 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 719ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:49:03 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:49:05 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 577ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:49:06 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:49:08 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 449ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:49:09 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 535ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:49:52 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:49:53 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:49:53 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:49:55 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 715ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:49:56 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 676ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:49:59 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:50:00 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 687ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:50:06 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart%2C+Chicago%2C+IL&destination=Union+Station%2C+South+Canal+Street%2C+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2013-11-22 11:50:09 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart, Chicago, IL", "destination"=>"Union Station, South Canal Street, Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 486ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:50:10 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:50:35 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:00 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:05 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:07 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:16 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:19 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:25 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:26 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:30 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 11:51:32 -0600
