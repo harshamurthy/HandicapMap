@@ -173,6 +173,12 @@ header {
   margin-right: 10px;
 }
 
+.edit {
+  font-size: 1.0em;
+  text-shadow: 4px 6px #000;
+  margin-right: 10px;
+}
+
 .blue {
   color: rgb(102, 217, 239);
 }

@@ -3,7 +3,9 @@
 
   <header class='logo'>
     <h1>Accessible <span class='blue'>routes</span></h1>
-    <h2 class='route-desc'><span class='text-muted'>from</span> <%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %></h2>
+    <h2 class='route-desc'>
+      <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+    </h2>
   </header>
   <% if @routes.count == 1 %>
     <% @style = 'none' %>
@@ -28,11 +30,18 @@
                 <li class='route-first'>
                   <% if step['travel_mode'] == 'WALKING' %>
                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>
-                  <% elsif step['travel_mode'] == 'TRANSIT'  %>
+                  <% elsif step['travel_mode'] == 'DRIVING' %>
+                    <%= step['distance'] %> - <%= step['instruction'] %>
+                  <% elsif step['travel_mode'] == 'TRANSIT' %>
                     <% if step['vehicle_type'] == 'BUS' %>
-                      Take the <span style="background-color: blue !important; padding: 0 5px; border-radius: 10px;"><%= step['departure_time'] %> #<%= step['vehicle_short_name'] %> Bus</span> from <%= step['departure_stop_name'] %> to <%= step['arrival_stop_name'] %>
+                      <%= step['distance'] %> - Take the <span style='background-color: blue !important; padding: 0 5px; border-radius: 5px;'><%= step['departure_time'] %> #<%= step['vehicle_short_name'] %> Bus</span> to <%= step['arrival_stop_name'] %>
                     <% elsif step['vehicle_type'] == 'SUBWAY' %>
-                      Take the <span style="background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;"><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
+                      <%= step['distance'] %> - Take the <span style='background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
+                    <% elsif step['vehicle_type'] == 'HEAVY_RAIL' %>
+                      <% if step['train_line'] == 'Union Pacific Northwest' %>
+                        <% step['train_line_color'] = '#F7C600' %>
+                      <% end %>
+                      <%= step['distance'] %> - Take the <span style='background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
                     <% end %>
                   <% end %>
                 </li>
@@ -40,11 +49,18 @@
                 <li class='route-last'>
                   <% if step['travel_mode'] == 'WALKING' %>
                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>
-                  <% elsif step['travel_mode'] == 'TRANSIT'  %>
+                  <% elsif step['travel_mode'] == 'DRIVING' %>
+                    <%= step['distance'] %> - <%= step['instruction'] %>
+                  <% elsif step['travel_mode'] == 'TRANSIT' %>
                     <% if step['vehicle_type'] == 'BUS' %>
-                      Take the <span style="background-color: blue !important; padding: 0 5px; border-radius: 10px;"><%= step['departure_time'] %> #<%= step['vehicle_short_name'] %> Bus</span> to <%= step['arrival_stop_name'] %>
+                      <%= step['distance'] %> - Take the <span style='background-color: blue !important; padding: 0 5px; border-radius: 5px;'><%= step['departure_time'] %> #<%= step['vehicle_short_name'] %> Bus</span> to <%= step['arrival_stop_name'] %>
                     <% elsif step['vehicle_type'] == 'SUBWAY' %>
-                      Take the <span style="background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;"><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
+                      <%= step['distance'] %> - Take the <span style='background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
+                    <% elsif step['vehicle_type'] == 'HEAVY_RAIL' %>
+                      <% if step['train_line'] == 'Union Pacific Northwest' %>
+                        <% step['train_line_color'] = '#F7C600' %>
+                      <% end %>
+                      <%= step['distance'] %> - Take the <span style='background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
                     <% end %>
                   <% end %>
                 </li>
@@ -52,11 +68,18 @@
                 <li>
                   <% if step['travel_mode'] == 'WALKING' %>
                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>
-                  <% elsif step['travel_mode'] == 'TRANSIT'  %>
+                  <% elsif step['travel_mode'] == 'DRIVING' %>
+                    <%= step['distance'] %> - <%= step['instruction'] %>
+                  <% elsif step['travel_mode'] == 'TRANSIT' %>
                     <% if step['vehicle_type'] == 'BUS' %>
-                      Take the <span style="background-color: blue !important; padding: 0 5px; border-radius: 10px;"><%= step['departure_time'] %> #<%= step['vehicle_short_name'] %> Bus</span> to <%= step['arrival_stop_name'] %>
+                      <%= step['distance'] %> - Take the <span style='background-color: blue !important; padding: 0 5px; border-radius: 5px;'><%= step['departure_time'] %> #<%= step['vehicle_short_name'] %> Bus</span> to <%= step['arrival_stop_name'] %>
                     <% elsif step['vehicle_type'] == 'SUBWAY' %>
-                      Take the <span style="background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;"><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
+                      <%= step['distance'] %> - Take the <span style='background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
+                    <% elsif step['vehicle_type'] == 'HEAVY_RAIL' %>
+                      <% if step['train_line'] == 'Union Pacific Northwest' %>
+                        <% step['train_line_color'] = '#F7C600' %>
+                      <% end %>
+                      <%= step['distance'] %> - Take the <span style='background-color: <%= step['train_line_color'] %>; padding: 0 5px; border-radius: 10px;'><%= step['departure_time'] %> <%= step['train_line'] %></span> to <%= step['arrival_stop_name'] %>
                     <% end %>
                   <% end %>
                 </li>
@@ -75,7 +98,7 @@
     var directions = $('.go-away').siblings('ul')
     directions.hide();
     $('.toggle').on('click', function () {
-      var closestDirection = $(this).siblings('ul')
+      var closestDirection = $(this).siblings ('ul')
       closestDirection.slideToggle('slow');
     });
   });
