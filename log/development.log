@@ -36944,3 +36944,43 @@ Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 14:17:
 
 
 Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 14:17:39 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 90ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2013-11-22 20:09:10 -0600
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2013-11-22 20:09:11 -0600
+
+
+Started GET "/route?utf8=%E2%9C%93&start=21674+Savanna+Lane%2C+Kildeer%2C+IL&destination=Merchandise+Mart+Chicago&commit=Route" for 127.0.0.1 at 2013-11-22 20:09:19 -0600
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart Chicago", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1608ms (Views: 7.3ms | ActiveRecord: 0.0ms)
