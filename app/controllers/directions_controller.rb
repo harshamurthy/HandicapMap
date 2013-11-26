@@ -11,7 +11,7 @@ class DirectionsController < ApplicationController
       @routes = @direction.accessible?
       render 'route'
     else
-      redirect_to root_url, notice: 'Please make sure both fields are completed.'
+      redirect_to root_url, notice: 'Please make sure both fields are properly completed.'
     end
   end
 
