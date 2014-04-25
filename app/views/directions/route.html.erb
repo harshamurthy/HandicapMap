@@ -13,6 +13,9 @@
     <% @style = 'go-away' %>
   <% end %>
   <% routes_option_counter = 1 %>
+  <% if @routes.count == 0 %>
+    <p>Call (847) 847-8447</p>
+  <% end %>
   <% @routes.each do |route| %>
     <div class='row'>
       <h2 class='col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1'>
@@ -27,6 +30,7 @@
           <ul class='directions'>
             <% route['route'].each do |step| %>
               <% if step == route['route'].first %>
+
                 <li class='route-first'>
                   <% if step['travel_mode'] == 'WALKING' %>
                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>
@@ -42,6 +46,7 @@
                     <% end %>
                   <% end %>
                 </li>
+
               <% elsif step == route['route'].last %>
                 <li class='route-last'>
                   <% if step['travel_mode'] == 'WALKING' %>
@@ -58,7 +63,7 @@
                     <% end %>
                   <% end %>
                 </li>
-              <% else %>
+
                 <li>
                   <% if step['travel_mode'] == 'WALKING' %>
                     <%= step['distance'] %> - <%= step['instruction'].gsub!('Walk', 'Roll') %>

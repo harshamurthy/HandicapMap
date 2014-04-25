@@ -36984,3 +36984,2049 @@ Processing by DirectionsController#route as HTML
   Parameters: {"utf8"=>"✓", "start"=>"21674 Savanna Lane, Kildeer, IL", "destination"=>"Merchandise Mart Chicago", "commit"=>"Route"}
   Rendered directions/route.html.erb within layouts/application (2.8ms)
 Completed 200 OK in 1608ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directions?utf8=%E2%9C%93&start=Merchadise+Mart+Chicago%2C+IL+&destination=30+N+Racine+Chicago%2C+IL&commit=Map+it" for 127.0.0.1 at 2014-04-25 10:25:31 -0500
+
+ActionController::RoutingError (No route matches [GET] "/directions"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 281ms (Views: 266.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:25:52 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago%2C+IL&destination=30+N.+Racine+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2014-04-25 10:31:01 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago, IL", "destination"=>"30 N. Racine Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1055ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:31:02 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:31:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:31:27 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:31:27 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:31:28 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:31:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:31:28 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago%2C+IL&destination=Union+Station+Chicago%2C+IL&commit=Route" for 127.0.0.1 at 2014-04-25 10:32:24 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago, IL", "destination"=>"Union Station Chicago, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 837ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:32:25 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:32:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:25 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:32:54 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=30+N+Racine+Chicago%2C+IL&destination=3730+Greenleaf+Ln+Northbrook%2C+IL&commit=Route" for 127.0.0.1 at 2014-04-25 10:33:56 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"30 N Racine Chicago, IL", "destination"=>"3730 Greenleaf Ln Northbrook, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 958ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:33:57 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:33:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:33:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:33:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:33:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:33:57 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:35:32 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:35:33 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:35:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:35:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:35:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:35:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:35:33 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:42:30 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago%2C+IL&destination=Union+Station&departure=on&commit=Route" for 127.0.0.1 at 2014-04-25 10:43:30 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago, IL", "destination"=>"Union Station", "departure"=>"on", "commit"=>"Route"}
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/MohammadOuyoun/Desktop/HandicapMap/app/models/direction.rb:138: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/directions_controller.rb:6:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago%2C+IL&destination=Union+Station&departure=on&commit=Route" for 127.0.0.1 at 2014-04-25 10:43:52 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago, IL", "destination"=>"Union Station", "departure"=>"on", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 861ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago%2C+IL&destination=Union+Station&departure=on&commit=Route" for 127.0.0.1 at 2014-04-25 10:43:53 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago, IL", "destination"=>"Union Station", "departure"=>"on", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 630ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:43:54 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:44:46 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Los+Angeles%2C+California&commit=Route" for 127.0.0.1 at 2014-04-25 10:45:09 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Los Angeles, California", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 671ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:45:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:45:32 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:45:46 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 306ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131470594160'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:48:34 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 316ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:  <!--  <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131471447780'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:48:45 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 663ms
+
+ActionView::Template::Error (undefined method `each' for #<String:0x007f9182dc0f30>):
+     9:   </header>
+    10: 
+    11:   <% routes_option_counter = 1 %>
+    12:   <% @routes.each do |route| %>
+    13:     <div class='row'>
+    14:       <h2 class='col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1'>
+    15:         <div class='route-duration pull-right' style='font-size: 12px'><%= route['duration'] %></div>
+  app/views/directions/route.html.erb:12:in `_app_views_directions_route_html_erb___4575260969135048738_70131471243960'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:49:14 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 292ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 0 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131475018940'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:51:44 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/MohammadOuyoun/Desktop/HandicapMap/app/models/direction.rb:133: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/directions_controller.rb:6:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:51:54 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 827ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 10:51:55 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:53:35 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/MohammadOuyoun/Desktop/HandicapMap/app/models/direction.rb:138: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/directions_controller.rb:6:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.0ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.8ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:53:45 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 340ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 0 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131475018940'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:54:03 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 332ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:56:30 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 317ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:56:30 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 307ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:56:31 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 331ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:56:31 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 346ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:56:31 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 276ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 10:56:32 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 298ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510677880'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.6ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:00:18 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 397ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% elsif %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131485535100'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:00:20 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 275ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% elsif %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131485535100'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:00:43 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 291ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+     7:       <%= link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url %><span class='text-muted'>from </span><%= @direction.start.split(' ').map {|w| w.capitalize }.join(' ') %> <span class='text-muted'>to</span> <%= @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') %>
+     8:     </h2>
+     9:   </header>
+    10:   <% if @routes.count == 1 %>
+    11:     <% @style = 'none' %>
+    12:   <% else %>
+    13:     <% @style = 'go-away' %>
+  app/views/directions/route.html.erb:10:in `count'
+  app/views/directions/route.html.erb:10:in `_app_views_directions_route_html_erb___4575260969135048738_70131510999240'
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 378ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:00:59 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 286ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:03:06 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:03:07 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:03:08 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 482ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:03:09 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 306ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:03:10 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 490ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:03:21 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:03:22 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:03:45 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1702ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:03:47 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:07:38 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 658ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:07:39 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 374ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:08:09 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:08:10 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:08:22 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 697ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:08:23 -0500
+
+
+Started GET "/312-829-4222" for 127.0.0.1 at 2014-04-25 11:09:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/312-829-4222"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/312-829-4222" for 127.0.0.1 at 2014-04-25 11:09:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/312-829-4222"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:10:10 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 841ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:10:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:10:18 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=30+N+Racine+Chicago%2C+IL&destination=3730+Greenleaf+Ln+Northbrook%2C+IL&commit=Route" for 127.0.0.1 at 2014-04-25 11:11:01 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"30 N Racine Chicago, IL", "destination"=>"3730 Greenleaf Ln Northbrook, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1746ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:11:03 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=30+N+Racine+Chicago%2C+IL&destination=3730+Greenleaf+Ln+Northbrook%2C+IL&commit=Route" for 127.0.0.1 at 2014-04-25 11:26:14 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"30 N Racine Chicago, IL", "destination"=>"3730 Greenleaf Ln Northbrook, IL", "commit"=>"Route"}
+ERROR: compiling _app_views_directions_route_html_erb___4575260969135048738_70131469872920 RAISED /Users/MohammadOuyoun/Desktop/HandicapMap/app/views/directions/route.html.erb:102: syntax error, unexpected keyword_ensure, expecting end-of-input
+Function body:           def _app_views_directions_route_html_erb___4575260969135048738_70131469872920(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "directions/route";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+<div class=\'container\'>
+
+  <header class=\'logo\'>
+    <h1>Accessible <span class=\'blue\'>routes</span></h1>
+    <h2 class=\'route-desc\'>
+      ';@output_buffer.append=( link_to "<i class=\'fa fa-pencil-square-o blue edit\'></i>".html_safe, root_url );@output_buffer.safe_append='<span class=\'text-muted\'>from </span>';@output_buffer.append=( @direction.start.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append=' <span class=\'text-muted\'>to</span> ';@output_buffer.append=( @direction.destination.split(' ').map {|w| w.capitalize }.join(' ') );@output_buffer.safe_append='
+    </h2>
+  </header>
+';   if @routes.count == 1 
+     @style = 'none' 
+   else 
+     @style = 'go-away' 
+   end 
+   routes_option_counter = 1 
+   @routes.each do |route| 
+@output_buffer.safe_append='    <div class=\'row\'>
+      <h2 class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <div class=\'route-duration pull-right\' style=\'font-size: 12px\'>';@output_buffer.append=( route['duration'] );@output_buffer.safe_append='</div>
+        <i class=\'fa fa-wheelchair blue\'></i>
+        Route ';@output_buffer.append=( routes_option_counter );@output_buffer.safe_append='
+      </h2>
+
+      <article class=\'col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1\'>
+        <ul>
+          <li class=\'toggle ';@output_buffer.append=( @style );@output_buffer.safe_append=' route-directions click\'><span class=\'blue\'>Directions</span></li>
+          <ul class=\'directions\'>
+';             route['route'].each do |step| 
+               if step == route['route'].first 
+@output_buffer.safe_append='                <li class=\'route-first\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               elsif step == route['route'].last 
+@output_buffer.safe_append='                <li class=\'route-last\'>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               elsif 
+@output_buffer.safe_append='                <li>
+';                   if step['travel_mode'] == 'WALKING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'].gsub!('Walk', 'Roll') );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'DRIVING' 
+@output_buffer.safe_append='                    ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - ';@output_buffer.append=( step['instruction'] );@output_buffer.safe_append='
+';                   elsif step['travel_mode'] == 'TRANSIT' 
+                     if step['vehicle_type'] == 'BUS' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: blue !important; border: 1px solid red; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' #';@output_buffer.append=( step['vehicle_short_name'] );@output_buffer.safe_append=' Bus</span> to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'SUBWAY' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: ';@output_buffer.append=( step['train_line_color'] );@output_buffer.safe_append='; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> train to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     elsif step['vehicle_type'] == 'HEAVY_RAIL' 
+@output_buffer.safe_append='                      ';@output_buffer.append=( step['distance'] );@output_buffer.safe_append=' - Take the <span style=\'background-color: #666; padding: 0 5px; border-radius: 10px;\'>';@output_buffer.append=( step['departure_time'] );@output_buffer.safe_append=' ';@output_buffer.append=( step['train_line'] );@output_buffer.safe_append='</span> Metra to ';@output_buffer.append=( step['arrival_stop_name'] );@output_buffer.safe_append='
+';                     end 
+                   else 
+@output_buffer.safe_append='                  Unfortunately there aren\'t any accessible routes to get you to your destination, but if you\'d like you may <a href="312-829-4222">Call a cab</a> (be sure to request a wheelchair accesible vehicle if that\'s what you require)
+';                   end 
+                   end 
+@output_buffer.safe_append='                </li>
+';               end 
+             end 
+@output_buffer.safe_append='          </ul>
+        </ul>
+      </article>
+    </div>
+';     routes_option_counter += 1 
+   end 
+@output_buffer.safe_append='</div>
+
+<script>
+  $(document).ready(function() {
+    var directions = $(\'.go-away\').siblings(\'ul\')
+    directions.hide();
+    $(\'.toggle\').on(\'click\', function () {
+      var closestDirection = $(this).siblings (\'ul\')
+      closestDirection.slideToggle(\'slow\');
+    });
+  });
+</script>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/MohammadOuyoun/Desktop/HandicapMap/app/controllers/directions_controller.rb:12:in `route'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__1250910946030659337__process_action__callbacks'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__4539534788006663148__call__callbacks'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/MohammadOuyoun/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered directions/route.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 798ms
+
+ActionView::Template::Error (/Users/MohammadOuyoun/Desktop/HandicapMap/app/views/directions/route.html.erb:102: syntax error, unexpected keyword_ensure, expecting end-of-input):
+    99: </script>
+  app/controllers/directions_controller.rb:12:in `route'
+
+
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/MohammadOuyoun/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/route?utf8=%E2%9C%93&start=30+N+Racine+Chicago%2C+IL&destination=3730+Greenleaf+Ln+Northbrook%2C+IL&commit=Route" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"30 N Racine Chicago, IL", "destination"=>"3730 Greenleaf Ln Northbrook, IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 669ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:26:32 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:26:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:48 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:26:48 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 283ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:26:59 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:54:46 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 626ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:54:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:55:06 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago&destination=30+North+Racine+Avenue+Chicago+IL&commit=Route" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago", "destination"=>"30 North Racine Avenue Chicago IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 457ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:55:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:38 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:55:38 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+Chicago&destination=30+North+Racine+Avenue+Chicago+IL&commit=Route" for 127.0.0.1 at 2014-04-25 11:55:55 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart Chicago", "destination"=>"30 North Racine Avenue Chicago IL", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 789ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:55:56 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+Processing by DirectionsController#landing_page as HTML
+  Rendered directions/landing_page.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:55:57 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart ", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 310ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:56:03 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:56:06 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart ", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 305ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:56:07 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart ", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 232ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:56:09 -0500
+
+
+Started GET "/route?utf8=%E2%9C%93&start=Merchandise+Mart+&destination=Africa&commit=Route" for 127.0.0.1 at 2014-04-25 11:56:52 -0500
+Processing by DirectionsController#route as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"Merchandise Mart ", "destination"=>"Africa", "commit"=>"Route"}
+  Rendered directions/route.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 250ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/bootstrap.min.css" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/override.css" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/bootstrap-theme.min.css" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
+
+
+Started GET "/assets/cartographer.png" for 127.0.0.1 at 2014-04-25 11:56:53 -0500
